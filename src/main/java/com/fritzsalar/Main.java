@@ -1,4 +1,7 @@
 package com.fritzsalar;
+	
+import com.fritzsalar.parser.XmlParser;
+import com.fritzsalar.process.UnixProcess;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -21,6 +24,14 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		UnixProcess process = new UnixProcess();
+//		process.list();
+//		process.get("omni");
+		process.execute("", "");
+		
+		XmlParser parser = new XmlParser();
+		parser.unmarshal();
+		
 		launch(args);
 	}
 }

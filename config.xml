@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+	<service name="Omnisession">
+		<processes>
+			<process name="omnisessiond">
+				<dir>/opt/manifests/consumer</dir>
+				<script>bundle exec script/omnisessiond</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+		</processes>
+	</service>
+	<service name="Collab">
+		<processes>
+			<process name="appctl">
+				<dir>/opt/apps/collab</dir>
+				<script>bundle exec script/appctl</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="campout">
+				<script>bundle exec script/campout</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="collabd">
+				<script>bundle exec script/collabd</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="jobjobd">
+				<script>bundle exec script/jobjobd</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+		</processes>
+	</service>
+</services>

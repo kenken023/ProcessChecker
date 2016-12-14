@@ -16,4 +16,10 @@ public class ProcessBase implements IProcess {
 		return null;
 	}
 
+	@Override
+	public Boolean execute(String processName, String action) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -17,14 +17,37 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+	  
+	  <plugin>
+    	<groupId>org.apache.maven.plugins</groupId>
+    	<artifactId>maven-antrun-plugin</artifactId>
+    	<version>1.8</version>
+    	<executions>
+  			<execution>
+            	<phase>test</phase>
+            	<goals>
+                	<goal>run</goal>
+            	</goals>
+            	<configuration>
+                	<tasks>
+                    	<echo>Using env.test.properties</echo>
+                    	<copy file="config.xml" tofile="${basedir}/target/jfx/app/config.xml"/>
+                    </tasks>
+                </configuration>
+            </execution>
+        </executions>
+      </plugin>
+
       <plugin>
 		<groupId>com.zenjava</groupId>
 		<artifactId>javafx-maven-plugin</artifactId>
 		<version>8.6.0</version>
 		<configuration>
 			<mainClass>com.fritzsalar.Main</mainClass>
+			<identifier></identifier>
 		</configuration>
 	  </plugin>
+
     </plugins>
   </build>
 </project>
