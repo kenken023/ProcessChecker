@@ -1,4 +1,4 @@
-package com.fritzsalar.process;
+package com.fritzsalar.processes;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class ProcessBase implements IProcess {
 	}
 
 	@Override
-	public Boolean execute(String processName, String action) {
+	public Boolean execute(String script) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -50,4 +50,28 @@
 			</process>
 		</processes>
 	</service>
+	<service name="Medforms">
+		<processes>
+		</processes>
+	</service>
+	<service name="Reports">
+		<processes>
+		</processes>
+	</service>
+	<service name="Account2">
+		<processes>
+		</processes>
+	</service>
+	<service name="Otapp">
+		<processes>
+		</processes>
+	</service>
+	<service name="PIS">
+		<processes>
+		</processes>
+	</service>
+	<service name="AddressBook">
+		<processes>
+		</processes>
+	</service>
 </services>

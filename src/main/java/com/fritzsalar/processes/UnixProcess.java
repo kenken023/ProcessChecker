@@ -1,4 +1,4 @@
-package com.fritzsalar.process;
+package com.fritzsalar.processes;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -21,8 +21,8 @@ public class UnixProcess extends ProcessBase {
 	}
 	
 	@Override
-	public Boolean execute(String processName, String action) {
-		return this.executer(processName, action);
+	public Boolean execute(String script) {
+		return this.executer(script);
 	}
 
 	private List<String> retriever(String processName) {
@@ -51,11 +51,11 @@ public class UnixProcess extends ProcessBase {
 		return list;
 	}
 	
-	private Boolean executer(String processName, String action) {
+	private Boolean executer(String script) {
 		Boolean executed = false;
 		
 		try {
-		    String[] cmd = { BASH_CMD, BASH_OPT, "curl google.com" };
+		    String[] cmd = { BASH_CMD, BASH_OPT, script };
 		    Process p = Runtime.getRuntime().exec(cmd);
 		    p.waitFor();
 		    executed = p.exitValue() == 0 ? true : false;
