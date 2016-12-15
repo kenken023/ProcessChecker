@@ -16,9 +16,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 
 
@@ -31,15 +33,13 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		try {
-//			BorderPane root = new BorderPane();
-			
+		try {			
 			Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("Process Manager");
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Process Manager - FIS");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -47,17 +47,6 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-//		UnixProcess process = new UnixProcess();
-//		process.list();
-//		process.get("omni");
-//		process.execute(null);
-		
-//		XmlParser<Services> parser = new XmlParser<Services>(Services.class);
-//		parser.unmarshal("config.xml");
-		
-//		ServicesBL servicesBL = new ServicesBL();
-//		System.out.println(servicesBL.getProcessStatus("Collab", "appctl").toString());
-
 		launch(args);
 	}
 	

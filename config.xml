@@ -50,28 +50,131 @@
 			</process>
 		</processes>
 	</service>
+	<!--
 	<service name="Medforms">
 		<processes>
+			<process name="appctl">
+				<dir>/opt/apps/collab</dir>
+				<script>bundle exec script/appctl</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="campout">
+				<script>bundle exec script/campout</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
 		</processes>
 	</service>
 	<service name="Reports">
 		<processes>
+			<process name="appctl">
+				<dir>/opt/apps/collab</dir>
+				<script>bundle exec script/appctl</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="campout">
+				<script>bundle exec script/campout</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
 		</processes>
 	</service>
 	<service name="Account2">
 		<processes>
+			<process name="appctl">
+				<dir>/opt/apps/collab</dir>
+				<script>bundle exec script/appctl</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="campout">
+				<script>bundle exec script/campout</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
 		</processes>
 	</service>
 	<service name="Otapp">
 		<processes>
+			<process name="appctl">
+				<dir>/opt/apps/collab</dir>
+				<script>bundle exec script/appctl</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="campout">
+				<script>bundle exec script/campout</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
 		</processes>
 	</service>
 	<service name="PIS">
 		<processes>
+			<process name="appctl">
+				<dir>/opt/apps/collab</dir>
+				<script>bundle exec script/appctl</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="campout">
+				<script>bundle exec script/campout</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
 		</processes>
 	</service>
 	<service name="AddressBook">
 		<processes>
+			<process name="appctl">
+				<dir>/opt/apps/collab</dir>
+				<script>bundle exec script/appctl</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
+			<process name="campout">
+				<script>bundle exec script/campout</script>
+				<actions>
+					<action>start</action>
+					<action>stop</action>
+					<action>restart</action>
+				</actions>
+			</process>
 		</processes>
-	</service>
+	</service>-->
 </services>

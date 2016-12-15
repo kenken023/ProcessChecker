@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.ListView ?>
+
+<GridPane fx:id="gridPaneProcess" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="120" />
+        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="120" />
+        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="120" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+        <Label fx:id="lblProcessName" text="Label" GridPane.columnIndex="0" />
+        <Label fx:id="lblStatus" text="Label" GridPane.columnIndex="1" />
+        <Label fx:id="lblAction" text="Label" GridPane.columnIndex="2" /> 
+    </children>
+</GridPane>
