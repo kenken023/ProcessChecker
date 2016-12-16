@@ -32,6 +32,7 @@
                 	<tasks>
                     	<echo>Using env.test.properties</echo>
                     	<copy file="config.xml" tofile="${basedir}/target/jfx/app/config.xml"/>
+                    	<copy file="runner.sh" tofile="${basedir}/target/jfx/app/runner.sh"/>
                     </tasks>
                 </configuration>
             </execution>

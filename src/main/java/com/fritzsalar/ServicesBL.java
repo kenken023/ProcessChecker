@@ -32,10 +32,6 @@ public class ServicesBL {
 		return service.getProcesses().getProcessList();
 	}
 	
-	public List<Action> getActionList(Process process) {
-		return process.getActions().getActionList();
-	}
-	
 	public ProcessStatus getProcessStatus(String service, String process) {
 		UnixProcess unixProcess = new UnixProcess();
 		boolean containsProcess = 
@@ -46,7 +42,7 @@ public class ServicesBL {
 	}
 	
 	public void start(Process process) {
-		
+		this.executeScript(String.format("cd %s && %s", process.getDir(), process.getScript()), "start");
 	}
 	
 	public void start(Service service) {
@@ -54,7 +50,7 @@ public class ServicesBL {
 	}
 	
 	public void stop(Process process) {
-		
+		this.executeScript(String.format("cd %s && %s", process.getDir(), process.getScript()), "stop");
 	}
 	
 	public void stop(Service service) {
@@ -74,7 +70,8 @@ public class ServicesBL {
 	
 	private Boolean executeScript(String script, String action) {
 		UnixProcess unixProcess = new UnixProcess();
-		return unixProcess.execute(String.format("{0} {1}", script, action));
+//		System.out.println(String.format("Script: %s %s", script, action));
+		return unixProcess.execute(String.format("%s %s", script, action));
 	}
 	
 	private Services parseServicesXml() {

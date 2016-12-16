@@ -12,16 +12,15 @@
 <GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <columnConstraints>
         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300" minWidth="10.0" prefWidth="300.0" />
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="200" minWidth="10.0" prefWidth="175" />
         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints valignment="TOP" fillHeight="true" minHeight="10.0" vgrow="SOMETIMES" />
         <RowConstraints fillHeight="true" minHeight="10.0" />
     </rowConstraints>
     <children>
         <Label fx:id="lblServiceName" text="Label" GridPane.columnIndex="1" />
-        
-        <ListView fx:id="listViewProcesses" maxHeight="200" minWidth="500" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+        <ListView fx:id="listViewProcesses" maxHeight="200" minWidth="700" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS" />
     </children>
 </GridPane>

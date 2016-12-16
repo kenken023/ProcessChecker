@@ -16,22 +16,26 @@ import javafx.scene.control.ListView;
 
 public class ServiceController implements Initializable {
 
-    @FXML
-    private ListView<Service> listViewServices;
+	@FXML
+	private ListView<Service> listViewServices;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		this.setServices();
+	}
 
+	@FXML
+	public void btnRefresh_Clicked(ActionEvent e) {
+		System.out.println("From Controller: btnRefresh_Clicked");
+		this.setServices();
+	}
+
+	private void setServices() {
 		ServicesBL servicesBL = new ServicesBL();
 		List<Service> myList = servicesBL.getList();
-        ObservableList<Service> items = FXCollections.observableArrayList(myList);
-        
-        listViewServices.setItems(items);
-        listViewServices.setCellFactory(listViewCeil -> new ServiceListViewCell());
-    }
-	
-	@FXML
-    public void btnRefresh_Clicked(ActionEvent e) {
-        System.out.println("From Controller: btnRefresh_Clicked");
-    }
+		ObservableList<Service> items = FXCollections.observableArrayList(myList);
+
+		listViewServices.setItems(items);
+		listViewServices.setCellFactory(listViewCeil -> new ServiceListViewCell());
+	}
 }

@@ -8,12 +8,14 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.control.ListView ?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
 
 <GridPane fx:id="gridPaneProcess" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <columnConstraints>
-        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="120" />
-        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="120" />
-        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="120" />
+        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="150" />
+        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="200" />
+        <ColumnConstraints hgrow="ALWAYS" halignment="CENTER" minWidth="10.0" prefWidth="300" />
     </columnConstraints>
     <rowConstraints>
         <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
@@ -21,6 +23,10 @@
     <children>
         <Label fx:id="lblProcessName" text="Label" GridPane.columnIndex="0" />
         <Label fx:id="lblStatus" text="Label" GridPane.columnIndex="1" />
-        <Label fx:id="lblAction" text="Label" GridPane.columnIndex="2" /> 
+        <FlowPane GridPane.columnIndex="2" hgap="10" alignment="CENTER">
+			<Button fx:id="btnStart" text="Start" onAction="#btnStart_Clicked"></Button>
+			<Button fx:id="btnStop" text="Stop" onAction="#btnStop_Clicked"></Button>
+			<Button fx:id="btnRestart" text="Restart" onAction="#btnRestart_Clicked"></Button>
+        </FlowPane>
     </children>
 </GridPane>

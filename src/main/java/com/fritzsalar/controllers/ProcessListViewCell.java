@@ -19,6 +19,7 @@ import javafx.scene.layout.GridPane;
 
 public class ProcessListViewCell extends ListCell<Process> {
 	private Service _service;
+	private Process _process;
 
 	@FXML
 	private Label lblProcessName;
@@ -58,19 +59,41 @@ public class ProcessListViewCell extends ListCell<Process> {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-
 			}
 
 			lblProcessName.setText(process.getName());
 			lblStatus.setText(this.getStatus(process));
-			lblAction.setText(ProcessStatus.INACTIVE.toString());
+			_process = process;
 			
-
 			setText(null);
 			setGraphic(gridPaneProcess);
 		}
-
 	}
+	
+	@FXML
+	public void btnStart_Clicked() {
+		System.out.println("btnStart clicked");
+		ServicesBL serviceBL = new ServicesBL();
+		serviceBL.start(_process);
+
+		lblStatus.setText(this.getStatus(_process));
+	}
+	
+	@FXML
+	public void btnStop_Clicked() {
+		System.out.println("btnStop clicked");
+		ServicesBL serviceBL = new ServicesBL();
+		serviceBL.stop(_process);
+		
+		lblStatus.setText(this.getStatus(_process));
+	}
+	
+	@FXML
+	public void btnRestart_Clicked() {
+		System.out.println("btnRestart clicked");
+	}
+	
+	
 	
 	private String getStatus(Process process) {
 		ServicesBL serviceBL = new ServicesBL();

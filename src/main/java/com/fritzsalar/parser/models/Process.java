@@ -6,12 +6,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "process")
-@XmlType(propOrder = { "name", "dir", "script", "actions" })
+@XmlType(propOrder = { "name", "dir", "script" })
 public class Process {
 	private String name;
     private String dir;
     private String script;
-    private Actions actions;
 
     @XmlAttribute(name = "name")
     public String getName() {
@@ -38,14 +37,5 @@ public class Process {
 
     public void setScript(String script) {
             this.script = script;
-    }
-
-    @XmlElement(name="actions")
-    public Actions getActions() {
-            return actions;
-    }
-
-    public void setActions(Actions actions) {
-            this.actions = actions;
     }
 }
